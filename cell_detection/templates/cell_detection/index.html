@@ -1,0 +1,23 @@
+<h1>Malarial Cell Detection </h1>
+<h2> Please upload the image below </h2>
+
+<form method="post" enctype="multipart/form-data" style="margin-top: 100px; margin-bottom: 60px;">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" id="btnUpload" class="btn btn-primary">Upload</button>
+</form>
+
+{% if image_uri is not None %}
+    {% if predicted_label is not None %}
+        <div class="alert alert-primary" role="alert">
+            Our model says it is <b>{{ predicted_label }}</b>
+        </div>
+    {% else %}
+        <div class="alert alert-danger" role="alert">
+            Prediction error. No label predicted.
+        </div>
+    {% endif %}
+
+    <img src="{{ image_uri }}" class="img-fluid" alt="Uploaded image"
+         style="max-width: min(500px, 100%); height: auto; margin-top: 30px;">
+{% endif %}
