@@ -10,7 +10,7 @@
 {% if image_uri is not None %}
     {% if predicted_label is not None %}
         <div class="alert alert-primary" role="alert">
-            Our model says it is <b>{{ predicted_label }}</b>
+            Our model says the cell is <b>{{ predicted_label }}</b>
         </div>
     {% else %}
         <div class="alert alert-danger" role="alert">
