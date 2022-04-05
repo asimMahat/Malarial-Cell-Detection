@@ -55,6 +55,6 @@ $ python manage.py runserver
 [Malarial cell classification using CNN](https://www.youtube.com/watch?v=R9PPxpzj5tI&t=1496s)
 
 
-Thank you for showing your intrest in this project. :+1:
+Thank you for showing your interest in this project :+1:.
 
 
